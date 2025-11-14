@@ -13,7 +13,7 @@ This isn't just another AI tutorial repo. This is a **collaborative cookbook** b
 - 🚀 **Advanced prompting** - Context manipulation, meta-prompting, quantum thinking
 - 🌟 **Going legendary** - Creator engines, growth strategies, the whole stack
 
-**For who?** Anyone curious about AI. From "I just heard about ChatGPT" to "I'm building the next AI unicorn."
+**For whom?** Anyone curious about AI. From "I just heard about ChatGPT" to "I'm building the next AI unicorn."
 
 ## The Philosophy
 
