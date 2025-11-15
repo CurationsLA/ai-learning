@@ -1,7 +1,7 @@
 {
-  "title": "CURATIONS - Human × AI Creative Agency",
+  "title": "VibeHub - Human × AI Creative Agency",
   "description": "Open-source frameworks, guides, and resources for AI development, collaboration, and creativity",
-  "author": "CURATIONS",
+  "author": "VibeHub",
   "language": "en",
   "gitbook": "3.2.3",
   "root": ".",
@@ -43,7 +43,7 @@
   },
   "links": {
     "sidebar": {
-      "CURATIONS Website": "https://curations.org",
+      "VibeHub Website": "https://curations.org",
       "CurationsLA": "https://la.curations.cc"
     }
   }
