@@ -20,8 +20,9 @@
 
 ### Search
 - **Current:** Pagefind integration (working)
-- **Enhancements:** Keyboard shortcuts (Cmd+K), result previews, recent searches
-- **Decision needed:** Keep Pagefind or switch to Algolia DocSearch
+- **Target:** Algolia DocSearch (decided 2025-11-15)
+- **Enhancements:** Keyboard shortcuts (Cmd+K), result previews, recent searches, instant results
+- **Rationale:** Better search experience, free for open-source, industry standard
 
 ### Motion/Transitions
 - **Animations:** Sidebar expand/collapse, scroll-to-section, fade-in content

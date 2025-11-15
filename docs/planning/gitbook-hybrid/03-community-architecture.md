@@ -57,9 +57,9 @@
 - **LocalStorage:** Only for UI state (collapsed sections, theme preference)
 
 ## Open Questions
-- [ ] Section-level vs page-level voting?
-- [ ] Public counts vs visual indicators?
-- [ ] Anonymous feedback policy?
+- [x] Section-level vs page-level voting? → **DECIDED:** Page-level (99-decisions-needed.md:17-20)
+- [x] Public counts vs visual indicators? → **DECIDED:** "Popular" badge/visual indicator (99-decisions-needed.md:25-28)
+- [x] Anonymous feedback policy? → **DECIDED:** GitHub auth required (99-decisions-needed.md:21-24)
 - [ ] Follow-up form for negative feedback ("Was this helpful?" → No)?
 
 ## Dependencies
