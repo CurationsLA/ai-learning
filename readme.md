@@ -1,12 +1,12 @@
-# Welcome to CURATIONS
+# Welcome to BUNKER
 
 **A Human × AI Creative Agency built on greater good creativity**
 
 ---
 
-## What Is CURATIONS?
+## What Is BUNKER?
 
-CURATIONS is where human creativity and AI capability meet to build things that matter.
+BUNKER is where human creativity and AI capability meet to build things that matter.
 
 We're not a tech company. We're not a consultancy. We're a **creative agency** that believes AI should amplify human potential, not replace it. We build:
 
@@ -23,12 +23,12 @@ We're not a tech company. We're not a consultancy. We're a **creative agency** t
 
 ## The Three Branches
 
-CURATIONS operates through three interconnected initiatives:
+BUNKER operates through three interconnected initiatives:
 
-### 1. **CURATIONS** (The Creative Agency)
+### 1. **BUNKER** (The Creative Agency)
 Human × AI collaboration for design, content, research, and AI strategy. We work with brands, communities, and creators to build things that matter.
 
-🌐 **[curations.org](https://curations.org)**
+🌐 **[bunker.curations.org](https://curations.org)**
 
 **What we do:**
 - AI strategy and implementation
@@ -43,7 +43,7 @@ Human × AI collaboration for design, content, research, and AI strategy. We wor
 - Open learning and documentation
 - AI personas ("Curators") with specialized expertise
 
-[Learn more about CURATIONS →](docs/about-curations.md) | [Explore Services →](https://curations.org)
+[Learn more about BUNKER →](src/content/docs/about-bunker.md) | [Explore Services →](https://curations.org)
 
 ### 2. **CurationsLA** (Hyperlocal Media)
 A sister project demonstrating Human × AI collaboration in action. CurationsLA is a **hyperlocal LA media platform** that's:
@@ -110,7 +110,7 @@ Our visual identity, brand language, and design philosophy - all documented and 
 [View Design Systems →](docs/design-systems.md)
 
 ### 🤖 **The Curators** (AI Personas)
-Meet the specialized AI personas that power CURATIONS - each with unique expertise and personality.
+Meet the specialized AI personas that power VibeHub - each with unique expertise and personality.
 
 [Meet the Curators →](docs/the-curators.md)
 
@@ -166,7 +166,7 @@ Browse the [full site map](SUMMARY.md) or use GitBook's AI to find what you need
 
 ## Hidden Layers
 
-*CURATIONS is built in layers. The more you explore, the more you'll discover.*
+*VibeHub is built in layers. The more you explore, the more you'll discover.*
 
 *Some things are obvious. Some things are hidden.*
 
@@ -196,7 +196,7 @@ After you try it, come back here. You're now on the path. 🌟
 
 ## Get Involved
 
-CURATIONS is a living collaboration. Here's how you can participate:
+VibeHub is a living collaboration. Here's how you can participate:
 
 - **Learn**: All our resources are free and open
 - **Contribute**: See something to improve? We welcome contributions
@@ -207,17 +207,219 @@ CURATIONS is a living collaboration. Here's how you can participate:
 
 ---
 
+## 📖 About This Documentation
+
+This documentation is built with **Astro** and **Starlight**, a modern static site generator for building fast, accessible documentation sites. It's hosted on GitHub Pages for easy access and collaboration.
+
+**For Repository Maintainers:**
+- 🚀 [Astro Documentation](https://docs.astro.build) - Learn more about Astro
+- 🌟 [Starlight Documentation](https://starlight.astro.build) - Starlight features and configuration
+- 📦 [Package.json](package.json) - Project dependencies and build scripts
+
+**For Contributors:**
+- All documentation is written in Markdown/MDX
+- Documentation files are in `src/content/docs/`
+- See [How to Contribute](docs/get-involved.md) for guidelines
+- Changes to the `main` branch automatically rebuild and deploy the site using Astro
+
+**Local Development:**
+```bash
+npm install          # Install dependencies
+npm run dev         # Start development server
+npm run build       # Build for production
+```
+
+---
+
+## 📋 Docs-as-Code
+
+This repository implements a **Docs-as-Code** workflow for managing OpenAPI specifications. API documentation is treated as code: version-controlled, automatically validated, and integrated into the development workflow.
+
+### What is Docs-as-Code?
+
+Docs-as-Code is a methodology where documentation is:
+- **Version-controlled** alongside code using Git
+- **Automatically validated** through CI/CD pipelines
+- **Reviewed** through pull requests like any other code change
+- **Published** automatically when changes are merged
+
+### OpenAPI Specification Management
+
+All OpenAPI specifications are stored in the [`specs/`](specs/) directory. When you add or modify OpenAPI files (`.yaml`, `.yml`, or `.json`), our automated workflow:
+
+1. **Validates** the specification against OpenAPI standards
+2. **Analyzes** changes and comments on pull requests
+3. **Documents** what endpoints or schemas have changed
+4. **Optionally uploads** to external services for SDK generation
+
+### How to Use
+
+**Adding a new API specification:**
+1. Create your OpenAPI spec file in the `specs/` directory
+2. Follow the [OpenAPI 3.0+ specification](https://spec.openapis.org/oas/v3.0.0)
+3. Commit and push your changes
+4. The workflow automatically validates your specification
+
+**Updating an existing specification:**
+1. Edit the OpenAPI file in `specs/`
+2. Create a pull request with your changes
+3. Review the automated validation results and change summary
+4. Merge when approved
+
+**Directory structure:**
+```
+specs/
+├── README.md           # Guidelines for OpenAPI specs
+└── example-api.yaml    # Example specification (replace with your own)
+```
+
+### Workflow Features
+
+- ✅ **Automatic validation** using industry-standard OpenAPI validators
+- 📊 **Change detection** on pull requests with detailed summaries
+- 🔄 **Integration ready** with Stainless API for SDK generation
+- 🚀 **Zero configuration** - works out of the box for basic validation
+
+### Optional: SDK Generation
+
+The workflow includes optional integration with [Stainless](https://stainless.com/) for automatic SDK generation. To enable:
+
+1. Create a Stainless account and project
+2. Configure authentication (GitHub OIDC or API key)
+3. Uncomment the `upload-to-stainless` job in `.github/workflows/openapi-spec-workflow.yml`
+4. Update with your project details
+
+See [`specs/README.md`](specs/README.md) for detailed documentation.
+
+### Workflow Configuration
+
+The Docs-as-Code workflow is defined in [`.github/workflows/openapi-spec-workflow.yml`](.github/workflows/openapi-spec-workflow.yml) and includes:
+
+- **Validation job**: Checks OpenAPI specs for correctness
+- **Documentation job**: Comments on PRs with change summaries
+- **Optional upload job**: Sends specs to external services (commented out by default)
+
+**Triggering the workflow:**
+- Automatically on push to `main` branch (for files in `specs/`)
+- Automatically on pull requests (for files in `specs/`)
+- Manually via GitHub Actions UI
+
+---
+
+## 🎨 Repository Origins and Enhancements
+
+### From Mintlify to BUNKER
+
+This repository represents a thoughtful evolution of documentation infrastructure, combining best practices from modern documentation platforms with CURATIONS' minimalistic and professional design philosophy.
+
+**Original Inspiration**: The [mintlify/starter](https://github.com/mintlify/starter) repository provided inspiration for creating beautiful, developer-friendly documentation. Mintlify offers excellent documentation features, but we chose to build on **Astro + Starlight** for greater flexibility and control over our documentation experience.
+
+### Why Astro + Starlight?
+
+Instead of forking Mintlify directly, we built BUNKER's documentation platform using:
+
+- **[Astro](https://astro.build)**: A modern static site generator focused on performance
+- **[Starlight](https://starlight.astro.build)**: Astro's documentation theme with built-in best practices
+- **Custom CURATIONS Branding**: Minimalistic, professional design aligned with our agency's visual identity
+
+This approach gives us:
+- ⚡ **Lightning-fast performance** with minimal JavaScript
+- 🎨 **Complete design control** with custom CSS and components
+- 📝 **Markdown/MDX content** for easy contribution
+- 🔍 **Built-in search** powered by Pagefind
+- 📱 **Responsive design** that works on all devices
+- ♿ **Accessibility-first** approach
+
+### BUNKER Branding
+
+The rebrand from the original concept to **BUNKER** includes:
+
+- **Visual Identity**: Left-aligned "BUNKER" title with "BY CURATIONS" subtitle
+- **Professional Aesthetic**: Minimalistic design with thoughtful color palette
+- **Consistent Naming**: All references updated across documentation and code
+- **CURATIONS Integration**: Clear connection to the CURATIONS ecosystem
+
+### Enhanced with Best-in-Class Tools
+
+BUNKER leverages modern development tools already integrated in this repository:
+
+1. **Astro + Starlight Documentation**
+   - Modern, fast, accessible documentation platform
+   - Built-in search, navigation, and responsive design
+   - Custom styling for BUNKER branding
+
+2. **Docs-as-Code Workflow** (OpenAPI Specifications)
+   - Automatic validation of API specifications
+   - Version control for all documentation
+   - Integration with [Stainless](https://stainless.com) for SDK generation
+   - See [specs/README.md](specs/README.md) for details
+
+3. **GitHub Pages Deployment**
+   - Automated builds and deployments via GitHub Actions
+   - Fast, reliable hosting at no cost
+   - Custom domain support (bunker.curations.org)
+
+4. **GitBook Integration** (Optional)
+   - Alternative documentation platform support
+   - See [GITBOOK_INTEGRATION.md](GITBOOK_INTEGRATION.md) for setup
+
+### Documentation Structure
+
+```
+ai-learning/
+├── src/
+│   ├── content/
+│   │   └── docs/          # All documentation content
+│   │       ├── about-bunker.md
+│   │       ├── cookbooks/ # AI development frameworks
+│   │       └── ...
+│   └── styles/
+│       └── custom.css     # BUNKER branding styles
+├── specs/                 # OpenAPI specifications
+├── astro.config.mjs       # Astro configuration
+└── package.json           # Dependencies and scripts
+```
+
+### Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+### Contributing
+
+All documentation is written in Markdown/MDX and lives in `src/content/docs/`. To contribute:
+
+1. Edit or create `.md` files in `src/content/docs/`
+2. Follow existing documentation style and structure
+3. Test locally with `npm run dev`
+4. Submit a pull request
+
+See [How to Contribute](src/content/docs/get-involved.md) for detailed guidelines.
+
+---
+
 ## Contact
 
-**CURATIONS**
+**BUNKER**
 Human × AI Creative Agency
 Los Angeles, CA
 
 Questions? Ideas? Collaborations?
-Reach out through our [Get Involved](docs/get-involved.md) page.
+Reach out through our [Get Involved](src/content/docs/get-involved.md) page.
 
 ---
 
 *"The future is built by those who believe in the beauty of greater good creativity."*
 
-**Welcome to CURATIONS.** ✨
+**Welcome to BUNKER.** ✨
