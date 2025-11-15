@@ -36,6 +36,11 @@
   - **DECIDED:** Motion One
   - **Rationale:** Lightweight, modern, framework-agnostic
   - **Date:** 2025-11-15
+- [x] **Search platform**
+  - **DECIDED:** Algolia DocSearch
+  - **Rationale:** Better search experience, free for open-source projects, industry standard with instant results
+  - **Alternatives considered:** Pagefind (current), custom search
+  - **Date:** 2025-11-15
 - [x] **Analytics platform**
   - **DECIDED:** Cloudflare Web Analytics
   - **Rationale:** Privacy-friendly, integrated with potential future Cloudflare deployment
