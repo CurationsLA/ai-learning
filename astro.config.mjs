@@ -14,10 +14,26 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: '🏠 Welcome to VibeHub',
+					label: '🏠 Welcome',
 					items: [
 						{ label: 'About VibeHub', link: '/about-vibehub/' },
+						{ label: 'Get Involved', link: '/get-involved/' },
+						{ label: 'Design Systems', link: '/design-systems/' },
+						{ label: 'Technical Architecture', link: '/technical-architecture/' },
+						{ label: 'The Curators', link: '/the-curators/' },
 					],
+				},
+				{
+					label: '🌱 Community',
+					items: [
+						{ label: 'About CurationsLA', link: '/about-curationsla/' },
+						{ label: 'Youth Curator Movement', link: '/youth-curator-movement/' },
+					],
+				},
+				{
+					label: '📚 Cookbooks',
+					collapsed: true,
+					autogenerate: { directory: 'cookbooks' },
 				},
 			],
 			customCss: [
