@@ -1,13 +1,34 @@
 # Table of Contents
 
-## Introduction
+## 🏠 Welcome to CURATIONS
 
-* [Welcome to the AI × Human Cookbook](readme.md)
-* [About This Collaboration](docs/cookbooks/README.md)
+* [Start Here](readme.md)
+* [About CURATIONS](docs/about-curations.md)
+* [About CurationsLA](docs/about-curationsla.md)
 
 ---
 
-## 🌱 Foundations: AI Development
+## 🌟 Core Initiatives
+
+* [The Curators (AI Personas)](docs/the-curators.md)
+* [Youth Curator Movement](docs/youth-curator-movement.md)
+
+---
+
+## 🎨 How We Build
+
+* [Design Systems](docs/design-systems.md)
+* [Technical Architecture](docs/technical-architecture.md)
+
+---
+
+## 📚 The AI × Human Cookbook
+
+Open-source frameworks for AI development, collaboration, and creativity
+
+* [About the Cookbook](docs/cookbooks/README.md)
+
+### 🌱 Foundations: AI Development
 
 Essential building blocks for AI agent development
 
@@ -15,9 +36,7 @@ Essential building blocks for AI agent development
 * [Model Garden & Foundation Models](docs/cookbooks/foundations/02-model-garden.md)
 * [Memory Management](docs/cookbooks/foundations/03-memory-management.md)
 
----
-
-## 🔍 RAG & Knowledge Systems
+### 🔍 RAG & Knowledge Systems
 
 Grounding agents with intelligent retrieval
 
@@ -26,9 +45,7 @@ Grounding agents with intelligent retrieval
 * [GraphRAG](docs/cookbooks/rag/03-graph-rag.md)
 * [Grounding Techniques](docs/cookbooks/rag/04-grounding.md)
 
----
-
-## 🤖 Agent Development
+### 🤖 Agent Development
 
 Building sophisticated AI agents
 
@@ -37,9 +54,7 @@ Building sophisticated AI agents
 * [Agent Models & Contracts](docs/cookbooks/agents/03-agent-models.md)
 * [Defining LLM Agents](docs/cookbooks/agents/04-defining-llm-agents.md)
 
----
-
-## 🛠️ Tools & Integration
+### 🛠️ Tools & Integration
 
 Connecting agents to the world
 
@@ -48,9 +63,7 @@ Connecting agents to the world
 * [Tool Ecosystems](docs/cookbooks/tools/03-tool-ecosystems.md)
 * [AI Agent Engines](docs/cookbooks/tools/04-agent-engines.md)
 
----
-
-## 🧠 Advanced Prompting
+### 🧠 Advanced Prompting
 
 Master-level AI collaboration techniques
 
@@ -61,9 +74,7 @@ Master-level AI collaboration techniques
 * [Quantum Prompting](docs/cookbooks/advanced-prompting/quantum-prompting.md)
 * [Temporal Debugging](docs/cookbooks/advanced-prompting/temporal-debugging.md)
 
----
-
-## 🎨 Business: Branding & Growth
+### 🎨 Business: Branding & Growth
 
 AI-powered brand building and discovery
 
@@ -74,9 +85,7 @@ AI-powered brand building and discovery
 * [Schema.org Mastery](docs/cookbooks/business/schema-mastery.md)
 * [Creator Singularity Engine](docs/cookbooks/business/creator-engine.md)
 
----
-
-## 🚀 Going Legendary
+### 🚀 Going Legendary
 
 Putting it all together
 
@@ -87,8 +96,6 @@ Putting it all together
 
 ---
 
-## Resources
+## 🤝 Get Involved
 
-* [Contributing](docs/contributing.md)
-* [Community](docs/community.md)
-* [Further Reading](docs/resources.md)
+* [How to Contribute, Learn & Collaborate](docs/get-involved.md)
