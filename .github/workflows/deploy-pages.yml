@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Astro site to GitHub Pages
 
 # Trigger the workflow on push to main branch
 on:
@@ -17,7 +17,10 @@ permissions:
 # Allow one concurrent deployment
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
+
+env:
+  BUILD_PATH: "."
 
 jobs:
   # Build job
@@ -27,54 +30,32 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Setup Python for BookGen (our custom GitBook alternative)
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.x'
-
-      # Validate configuration files before build (fail fast if invalid)
-      - name: Validate configuration files
-        run: |
-          echo "Validating book.json syntax..."
-          python3 -c "import json; json.load(open('book.json')); print('✓ book.json is valid JSON')" || {
-            echo "❌ ERROR: book.json has invalid JSON syntax"
-            exit 1
-          }
-          
-          echo "Validating SUMMARY.md exists..."
-          if [ ! -f "SUMMARY.md" ]; then
-            echo "❌ ERROR: SUMMARY.md not found"
-            exit 1
-          fi
-          echo "✓ SUMMARY.md exists"
-          
-          echo "✅ All configuration files are valid"
-
-      # Install BookGen dependencies
-      - name: Install dependencies
-        run: |
-          echo "📦 Installing Python markdown library..."
-          pip3 install markdown
-
-      # Build with BookGen (custom GitBook alternative)
-      - name: Build with BookGen
-        run: |
-          echo "🚀 Building documentation with BookGen..."
-          python3 .bookgen/generator.py .
-          
-          echo "📊 Build statistics:"
-          echo "  - Output directory: _book/"
-          echo "  - Total size: $(du -sh _book/ | cut -f1)"
-          echo "  - Files generated: $(find _book -type f | wc -l)"
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        run: npm ci
+        working-directory: ${{ env.BUILD_PATH }}
+
+      - name: Build with Astro
+        run: |
+          npm run build -- \
+            --site "${{ steps.pages.outputs.origin }}" \
+            --base "${{ steps.pages.outputs.base_path }}"
+        working-directory: ${{ env.BUILD_PATH }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_book
+          path: ${{ env.BUILD_PATH }}/dist
 
   # Deployment job
   deploy:

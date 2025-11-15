@@ -1,12 +1,12 @@
-# Welcome to CURATIONS
+# Welcome to VibeHub
 
 **A Human × AI Creative Agency built on greater good creativity**
 
 ---
 
-## What Is CURATIONS?
+## What Is VibeHub?
 
-CURATIONS is where human creativity and AI capability meet to build things that matter.
+VibeHub is where human creativity and AI capability meet to build things that matter.
 
 We're not a tech company. We're not a consultancy. We're a **creative agency** that believes AI should amplify human potential, not replace it. We build:
 
@@ -23,12 +23,12 @@ We're not a tech company. We're not a consultancy. We're a **creative agency** t
 
 ## The Three Branches
 
-CURATIONS operates through three interconnected initiatives:
+VibeHub operates through three interconnected initiatives:
 
-### 1. **CURATIONS** (The Creative Agency)
+### 1. **VibeHub** (The Creative Agency)
 Human × AI collaboration for design, content, research, and AI strategy. We work with brands, communities, and creators to build things that matter.
 
-🌐 **[curations.org](https://curations.org)**
+🌐 **[vibehub.org](https://curations.org)**
 
 **What we do:**
 - AI strategy and implementation
@@ -43,7 +43,7 @@ Human × AI collaboration for design, content, research, and AI strategy. We wor
 - Open learning and documentation
 - AI personas ("Curators") with specialized expertise
 
-[Learn more about CURATIONS →](docs/about-curations.md) | [Explore Services →](https://curations.org)
+[Learn more about VibeHub →](src/content/docs/about-vibehub.md) | [Explore Services →](https://curations.org)
 
 ### 2. **CurationsLA** (Hyperlocal Media)
 A sister project demonstrating Human × AI collaboration in action. CurationsLA is a **hyperlocal LA media platform** that's:
@@ -110,7 +110,7 @@ Our visual identity, brand language, and design philosophy - all documented and 
 [View Design Systems →](docs/design-systems.md)
 
 ### 🤖 **The Curators** (AI Personas)
-Meet the specialized AI personas that power CURATIONS - each with unique expertise and personality.
+Meet the specialized AI personas that power VibeHub - each with unique expertise and personality.
 
 [Meet the Curators →](docs/the-curators.md)
 
@@ -166,7 +166,7 @@ Browse the [full site map](SUMMARY.md) or use GitBook's AI to find what you need
 
 ## Hidden Layers
 
-*CURATIONS is built in layers. The more you explore, the more you'll discover.*
+*VibeHub is built in layers. The more you explore, the more you'll discover.*
 
 *Some things are obvious. Some things are hidden.*
 
@@ -196,7 +196,7 @@ After you try it, come back here. You're now on the path. 🌟
 
 ## Get Involved
 
-CURATIONS is a living collaboration. Here's how you can participate:
+VibeHub is a living collaboration. Here's how you can participate:
 
 - **Learn**: All our resources are free and open
 - **Contribute**: See something to improve? We welcome contributions
@@ -209,23 +209,31 @@ CURATIONS is a living collaboration. Here's how you can participate:
 
 ## 📖 About This Documentation
 
-This documentation is built with **BookGen**, a modern custom static site generator designed specifically for this repository as a lightweight alternative to GitBook. It's hosted on GitHub Pages for easy access and collaboration.
+This documentation is built with **Astro** and **Starlight**, a modern static site generator for building fast, accessible documentation sites. It's hosted on GitHub Pages for easy access and collaboration.
 
 **For Repository Maintainers:**
-- 📘 [BookGen Documentation](BOOKGEN.md) - Complete guide to BookGen, our custom GitBook alternative
-- 🚀 [GitHub Pages Setup](GITHUB_PAGES_SETUP.md) - Step-by-step instructions to enable hosting
-- 🔧 [BookGen Generator](.bookgen/generator.py) - The Python script that builds the site
+- 🚀 [Astro Documentation](https://docs.astro.build) - Learn more about Astro
+- 🌟 [Starlight Documentation](https://starlight.astro.build) - Starlight features and configuration
+- 📦 [Package.json](package.json) - Project dependencies and build scripts
 
 **For Contributors:**
-- All documentation is written in Markdown
+- All documentation is written in Markdown/MDX
+- Documentation files are in `src/content/docs/`
 - See [How to Contribute](docs/get-involved.md) for guidelines
-- Changes to the `main` branch automatically rebuild and deploy the site using BookGen
+- Changes to the `main` branch automatically rebuild and deploy the site using Astro
+
+**Local Development:**
+```bash
+npm install          # Install dependencies
+npm run dev         # Start development server
+npm run build       # Build for production
+```
 
 ---
 
 ## Contact
 
-**CURATIONS**
+**VibeHub**
 Human × AI Creative Agency
 Los Angeles, CA
 
@@ -236,4 +244,4 @@ Reach out through our [Get Involved](docs/get-involved.md) page.
 
 *"The future is built by those who believe in the beauty of greater good creativity."*
 
-**Welcome to CURATIONS.** ✨
+**Welcome to VibeHub.** ✨
