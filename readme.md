@@ -28,7 +28,7 @@ VibeHub operates through three interconnected initiatives:
 ### 1. **VibeHub** (The Creative Agency)
 Human × AI collaboration for design, content, research, and AI strategy. We work with brands, communities, and creators to build things that matter.
 
-🌐 **[vibehub.org](https://curations.org)**
+🌐 **[bunker.curations.org](https://curations.org)**
 
 **What we do:**
 - AI strategy and implementation
