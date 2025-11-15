@@ -27,6 +27,8 @@ jobs:
   validate-openapi:
     name: Validate OpenAPI Specifications
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
