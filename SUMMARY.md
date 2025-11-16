@@ -96,6 +96,17 @@ Putting it all together
 
 ---
 
+## 🚧 Planned Features
+
+Documentation for upcoming features and capabilities
+
+* [Features Overview](docs/features/README.md)
+* [Silverlining (Planning)](docs/features/silverlining.md)
+* [mintify (Planning)](docs/features/mintify.md)
+* [Feature Issues & Open Questions](docs/features/ISSUES.md)
+
+---
+
 ## 🤝 Get Involved
 
 * [How to Contribute, Learn & Collaborate](docs/get-involved.md)
